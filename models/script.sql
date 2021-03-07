@@ -1,0 +1,89 @@
+use FarmApp;
+select item_id, item_name from items;
+-- create table categories(
+--     category_id int Primary Key auto_increment not null,
+--     name varchar(20) not null
+-- );
+-- desc categories;
+-- create table items(
+--     item_id int Primary Key auto_increment not null,
+--     item_name varchar(40) not null,
+--     descp varchar(40),
+--     price float not null,
+--     stock int not null,
+--     category_id int not null,
+--     Foreign Key(category_id)
+--         References categories(category_id)
+--      on delete cascade 
+--     on update cascade
+
+-- );
+-- drop table followers;
+-- create table followers(
+--     user_id int(11) not null,
+--     follower_id int(11) not null,
+--     Primary Key(user_id, follower_id),
+--     Foreign Key(user_id)
+--         References User(user_id)
+--     on delete cascade 
+--     on update cascade,
+--     Foreign Key(follower_id)
+--         References User(user_id)
+--     on delete cascade 
+--     on update cascade
+-- );
+-- desc items;
+-- create table posts(
+--     post_id int Primary Key auto_increment not null,
+--     user_id int(11) not null,
+--     item_id int(11) not null,
+--     descp varchar(2000),
+--     likes int not null default 0,
+--     Foreign Key(user_id)
+--         References User(user_id)
+--      on delete cascade 
+--     on update cascade,
+--     Foreign Key(item_id)
+--         References items(item_id)
+--      on delete cascade 
+--     on update cascade
+
+-- );
+-- desc posts;
+-- drop orders;
+-- drop order_items;
+-- create table orders(
+--     order_id int Primary Key auto_increment not null,
+--     buyer_id int(11) not null,
+--     seller_id int(11) not null,
+--     order_date date not null,
+--     order_status boolean default false,
+--     Foreign Key(buyer_id)
+--         References User(user_id)
+--     on delete cascade 
+--     on update cascade,
+--     Foreign Key(seller_id)
+--         References User(user_id)
+--     on delete cascade 
+--     on update cascade
+
+-- );
+-- desc orders;
+
+-- create table order_items(
+--      order_id int(11) not null,
+--      item_id int(11) not null,
+--      total float default 0,
+--      quantity int default 0,
+--      Primary Key(order_id, item_id),
+--     Foreign Key(order_id)
+--         References orders(order_id)
+--     on delete cascade 
+--     on update cascade,
+--     Foreign Key(item_id)
+--         References items(item_id)
+--     on delete cascade 
+--     on update cascade
+-- );
+-- desc order_items;
+
